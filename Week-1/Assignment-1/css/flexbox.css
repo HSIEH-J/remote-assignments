@@ -1,0 +1,18 @@
+.main-header,
+.item,
+.list {
+    display: flex;
+    justify-content: space-between;
+}
+
+.content{
+    display: flex;
+    flex-wrap: wrap;
+    
+}
+
+.content2{
+    display: flex;
+    flex-wrap: wrap;
+}
+
