@@ -1,0 +1,143 @@
+
+
+body {
+	margin: 0;
+}
+
+header {
+    background-color: silver;
+}
+
+.first {
+    margin-left: 1rem;
+}
+
+.item {
+    list-style: none 
+}
+
+.list {
+    margin-right: 2rem;
+}
+
+.title {
+    background-color: lightsteelblue;
+    text-align: center;
+    padding: 40px;
+	margin: 0px auto;
+    
+}
+
+.subtitle {
+    text-align: center;
+    padding-top: .5em;
+	padding-bottom: .5em;
+}
+
+
+
+.box1 {
+    background-color: lightslategrey;
+    text-align: center;
+    margin: 0px auto;
+    margin-right: 5px;
+    margin-bottom: 5px;
+    width: 500px;
+    height: 100px;
+    padding: 20px;
+}
+
+.box2 {
+    background-color: lightslategrey;
+    text-align: center;
+    margin: 0px auto;
+    margin-left: 5px;
+    margin-bottom: 5px;
+    width: 500px;
+    height: 100px;
+    padding: 20px;
+}
+
+.box3 {
+    background-color: lightslategrey;
+    text-align: center;
+    margin: 1px auto;
+    margin-right: 5px;
+    width: 500px;
+    height: 100px;
+    padding: 20px;
+}
+
+.box4 {
+    background-color: lightslategrey;
+    text-align: center;
+    margin: 1px auto;
+    margin-left: 5px;
+    width: 500px;
+    height: 100px;
+    padding: 20px;
+}
+
+.button {
+    background-color: lightskyblue;
+    text-align: center;
+    line-height: 35px;
+    width: 150px;
+    height: 35px;
+    margin: 0 auto;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    
+}
+
+.box5 {
+    background-color: lightslategrey;
+    text-align: center;
+    margin: 0px auto;
+    margin-right: 5px;
+    margin-bottom: 5px;
+    width: 500px;
+    height: 100px;
+    padding: 20px;
+}
+
+.box6 {
+    background-color: lightslategrey;
+    text-align: center;
+    margin: 0px auto;
+    margin-left: 5px;
+    margin-bottom: 5px;
+    width: 500px;
+    height: 100px;
+    padding: 20px;
+}
+
+.box7 {
+    background-color: lightslategrey;
+    text-align: center;
+    margin: 1px auto;
+    margin-right: 5px;
+    width: 500px;
+    height: 100px;
+    padding: 20px;
+}
+
+.box8 {
+    background-color: lightslategrey;
+    text-align: center;
+    margin: 1px auto;
+    margin-left: 5px;
+    width: 500px;
+    height: 100px;
+    padding: 20px;
+}
+
+/* @media (min-width: 1200) {
+    .content {
+        width: 1200px;
+    }
+
+    .content2 {
+        width: 1200px;
+    }
+} */
