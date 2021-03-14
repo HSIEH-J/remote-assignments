@@ -1,0 +1,12 @@
+doctype html
+html(lang="en")
+  head
+    title my name
+  body   
+  block main
+    form(action='/trackName', method='post')
+      label Please enter your name:
+        input(type='text', name='username')
+      button(type='submit') Submit
+
+      

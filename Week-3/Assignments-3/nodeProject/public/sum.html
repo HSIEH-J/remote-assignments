@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+
+<html>
+
+  <head>
+    <script>
+        var xhr = new XMLHttpRequest();
+        xhr.onreadystatechange = function () {
+        if (xhr.readyState === 4) {
+            document.getElementById('number').innerHTML = xhr.responseText;
+        }
+        };
+        xhr.open('GET', 'http://localhost:3000/data?number=10');
+        xhr.send();
+    </script>
+  </head>
+     
+  <body>
+    
+    <div id="number">
+
+    </div>
+
+    <div>
+        <p>Please enter a number :</p>
+        <input type="text" id="answer"></input>
+        <button id="button">Submit</button>
+
+    </div>
+
+    <div id="result">
+      
+    </div>
+
+  <script src="number.js"></script>
+  </body>
+
+</html>
