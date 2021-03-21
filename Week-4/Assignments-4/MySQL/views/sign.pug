@@ -1,0 +1,15 @@
+doctype html
+html(lang="en")
+  head
+    title home page 
+  body   
+  block main
+    form(action='/home', method='post')
+      label sign-up:
+        input(type='text', name='up')
+      button(type='submit') Submit
+    form(action='/home', method='post')
+      label sign-in:
+        input(type='text', name='in')
+        input(type='text', name='password')
+      button(type='submit') Submit
