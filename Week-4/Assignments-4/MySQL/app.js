@@ -55,44 +55,42 @@ app.get('/createtable', (req, res) => {
 
 app.get('/home', (req, res) => {
     res.render('sign');
- });
-
-app.post('/home', (req, res) => {
-   res.render('sign');
-   let up = req.body.up;
-   let signIn = req.body.in;
-   let password = req.body.password;
-   if (up){
-       let check = 'SELECT email FROM user WHERE email = `${up}`';
-       if(!check){
-        let post = {email: up};
-        let sql = 'INSERT INTO user SET ?';
-        let query = db.query(sql, post, (err, result) => {
-             if(err) {
-               throw err;
-             }else {
-               res.redirect('/member');
-             }
-        });
-       } else {
-        res.send('email already exists')
-       }
-   };
-
-   if (signIn){
-    let check1 = 'SELECT email FROM user WHERE email = `${signIn}`';
-    let check2 = 'SELECT email FROM user WHERE email = `${password}`';
-    if(check1 && check2){
-     res.redirect('/member');
-    } else {
-     res.send('email or password is incorrect!')
-    }
-};
-   
 });
 
+
+app.post('/home', (req, res) => {
+    let user = {email: req.body.up, password: req.body.password1};
+    let check = `SELECT email FROM user WHERE email = '${req.body.up}'`;
+    let query = db.query(check, (err, result) => {
+        if(err) throw err;
+        if(result.length == 0){
+         let sql = 'INSERT INTO user SET ?';
+         let query = db.query(sql, user, (err, result) => {
+               if(err) throw err;
+               return res.redirect('/member');
+         });
+        } else {
+            res.send('email already exists');
+        }
+    });    
+});
+
+app.post('/home', (req, res) => {
+        let check = `SELECT * FROM user WHERE email = '${req.body.in}' AND password = '${req.body.password2}'`;
+        let query = db.query(check, (err, result) => {
+            if(err) throw err;
+            if(result.length == 0){
+                res.send('email or password is incorrect!!');
+            } else {
+                return res.redirect('/member');
+            }
+        });   
+});
+
+
+
 app.get('/member', (req, res) => {
-    res.sent('Welcome!!');
+    res.send('Welcome!!');
  });
 
 app.listen(3000, () => {

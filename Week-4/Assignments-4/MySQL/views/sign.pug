@@ -4,12 +4,25 @@ html(lang="en")
     title home page 
   body   
   block main
+    h1 Welcome!!
+    h2 If you don't have a account yet...
     form(action='/home', method='post')
-      label sign-up:
+      label SIGN-UP HERE: 
+      p
+        p E-mail:
         input(type='text', name='up')
+        p  
+        p Password:
+        input(type='text', name='password1')
       button(type='submit') Submit
+    p 
+    h2 If you already have a account ... 
     form(action='/home', method='post')
-      label sign-in:
+      label SIGN-IN HERE:
+      p 
+        p E-mail:
         input(type='text', name='in')
-        input(type='text', name='password')
+        p 
+        p Password: 
+        input(type='text', name='password2')
       button(type='submit') Submit
